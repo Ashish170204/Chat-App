@@ -18,11 +18,11 @@ export const SocketProvider = ({ children }) => {
   useEffect(() => {
     if (authUser) {
       const socket = io(
-        import.meta.env.VITE_BACKEND_URL || "http://localhost:5010",
+       import.meta.env.VITE_BACKEND_URL || "http://localhost:5010",
         {
           query: { userId: authUser.user._id },
-        }
-      );
+    }
+       );
       setSocket(socket);
       socket.on("getOnlineUsers", (users) => {
         setOnlineUsers(users);
@@ -35,7 +35,7 @@ export const SocketProvider = ({ children }) => {
       }
     }
   }, [authUser]);
-
+  
   return (
     <socketContext.Provider value={{ socket, onlineUsers }}>
       {children}
