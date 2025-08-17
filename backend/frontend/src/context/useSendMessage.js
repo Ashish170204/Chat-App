@@ -7,8 +7,7 @@ const useSendMessage = () => {
   const sendMessages = async (message) => {
     setLoading(true);
     try {
-      const res = await axios.post(
-        `http://localhost:5010/message/send/${selectedConversation._id}`,
+      const res = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/message/send/${selectedConversation._id}`,
           {message},
           {withCredentials: true}
       );
