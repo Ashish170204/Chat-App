@@ -1,0 +1,23 @@
+***********MESSAGE MODEL*****************
+                ||
+let suppose ANKIT(senderID)--->"hello"
+and suppose ASHISH(recieverIDID)--->"hello"
+
+---> har baroi mongodb ek random unique id dega <---
+_ID_=JKBDAJKSJ(through mongoDB)  
+ANKIT(senderID)---> 1234
+ASHISH(recieverID)--->4321
+message--->"hello"
+
+_ID_=JKBDAJKSJ(through mongoDB)  har baroi mongodb ek random unique id dega 
+ASHISH(senderID)--->4321
+ANKIT(recieverID)--->1234
+message--->"hii"
+
+
+
+**********CONVERSATION MODEL**************
+                ||
+_ID_=JDJASDASNDNLSADN(mongoDB)
+member{senderID,recieverID}
+message{_ID_}
