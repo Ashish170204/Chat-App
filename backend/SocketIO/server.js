@@ -5,7 +5,6 @@ import express from "express";
 const app = express();
 
 const server = http.createServer(app);
-
 const io = new Server(server, {
   cors: {
     origin: process.env.FRONTEND_URL || "https://chat-app-1-s9k6.onrender.com",    // //http://localhost:5173/

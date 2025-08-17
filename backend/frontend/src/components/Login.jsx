@@ -19,7 +19,7 @@ function Login() {
       password: data.password,
     };
     try {
-      const response = await axios.post("${import.meta.env.VITE_BACKEND_URL}/user/login", userInfo,{
+      const response = await axios.post("http://localhost:5010/user/login", userInfo,{
         withCredentials: true,
       })
       toast.success("Login Successful! ");

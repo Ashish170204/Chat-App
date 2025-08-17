@@ -29,7 +29,7 @@ function Signup() {
       password: data.password,
       confirmPassword: data.confirmPassword,
     };
-    await axios.post("${import.meta.env.VITE_BACKEND_URL}/user/signup", userInfo,{
+    await axios.post("http://localhost:5010/user/signup", userInfo,{
         withCredentials: true,
     })
       .then((response) => {

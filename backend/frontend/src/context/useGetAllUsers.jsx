@@ -10,7 +10,7 @@ function useGetAllUsers() {
       setLoading(true);
       try {
         const token = Cookies.get("jwt");
-        const response = await axios.get("${import.meta.env.VITE_BACKEND_URL}/user/getUserProfile", {
+        const response = await axios.get("http://localhost:5010/user/getUserProfile", {
           withCredentials: true,
           headers: {
             Authorization: `Bearer ${token}`,

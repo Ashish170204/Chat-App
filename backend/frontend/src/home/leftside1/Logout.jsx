@@ -10,7 +10,7 @@ function Logout() {
      const handleLogout = async () => {
     setLoading(true);
     try {
-       const res = await axios.post("${import.meta.env.VITE_BACKEND_URL}/user/logout", {}, {
+       const res = await axios.post("http://localhost:5010/user/logout", {}, {
         withCredentials: true,
         });
       localStorage.removeItem("messenger");
