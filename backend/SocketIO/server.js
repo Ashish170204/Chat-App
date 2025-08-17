@@ -5,15 +5,10 @@ import express from "express";
 const app = express();
 
 const server = http.createServer(app);
-// const io = new Server(server, {
-//   cors: {
-//     origin: process.env.FRONTEND_URL || "http://localhost:5173",
-//     methods: ["GET", "POST"],
-//   },
-// });
+
 const io = new Server(server, {
   cors: {
-    origin: process.env.FRONTEND_URL || "http://localhost:5173",
+    origin: process.env.FRONTEND_URL || "https://chat-app-1swp.onrender.com",    // //http://localhost:5173/
     methods: ["GET", "POST"],
     credentials: true
   },
